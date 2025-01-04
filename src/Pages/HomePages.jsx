@@ -6,8 +6,10 @@ import Loader from '../Components/Loader.jsx';
 
 const HomePages = () => {
 
+
     const [newestPost, setNewestPost] = useState(null);
 
+    // Request APi inside the useEffect( ) Hook
     useEffect(() => {
         (async () => {
             const res = await postNewest();
