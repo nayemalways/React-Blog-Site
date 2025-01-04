@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getPostCategories } from '../APIrequest/ApiRequest.js';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
  
 
@@ -22,8 +22,8 @@ const Layout = (props) => {
 
 
     return (
-        <div>
-            <div className="navbar shadow bg-base-100">
+        <div >
+            <div className="navbar top-0 fixed z-50 shadow bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -55,7 +55,7 @@ const Layout = (props) => {
 
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <a className="ml-10 font-bold text-violet-600 text-2xl">Nayem'sBlog</a>
                 </div>
 
 

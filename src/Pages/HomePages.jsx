@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import Layout from '../Layout/Layout';
 import BlogLIst from '../Components/BlogLIst';
 import { postNewest } from '../APIrequest/ApiRequest.js';
+import Loader from '../Components/Loader.jsx';
 
 const HomePages = () => {
 
-    const [newestPost, setNewestPost] = useState([]);
+    const [newestPost, setNewestPost] = useState(null);
 
     useEffect(() => {
         (async () => {
@@ -18,7 +19,10 @@ const HomePages = () => {
 
     return (
         <Layout>
-             <BlogLIst data={newestPost} />
+            {
+                newestPost === null ? <Loader />: <BlogLIst data={newestPost} />
+            }
+             
         </Layout>
     );
 };
