@@ -72,4 +72,26 @@ export const postListByCategory = async (categoryId) => {
 }
 
 
+
+
+// Call Api for getting  post details
+export const postDetails= async (postId) => {
+     
+    try {
+       
+        const res = await axios.get(`${BaseURL}/post-details/${postId}`);
+        
+        if(res.status === 200){
+            return res.data;
+        }else{
+            return [];
+        }
+        
+    }catch(e) {
+        console.log(e);
+    }
+     
+}
+
+
  

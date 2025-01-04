@@ -15,7 +15,7 @@ export default function App() {
       <Routes>
         <Route path= '/' element={<HomePages/>} />
         <Route path= '/byCategory/:categoryId' element={<ByCategoryPage/>} />
-        <Route path= '/details/:postId' element={<DetailsPage/>} />
+        <Route path= '/post-details/:postId' element={<DetailsPage/>} />
         <Route path= '*' element={<NotFoundPage/>} />
       </Routes>
      </BrowserRouter>

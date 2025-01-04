@@ -12,7 +12,7 @@ const BlogLIst = ({data}) => {
                 {
                     data.map((item, index) => {
                         return (
-                            <Link key={item['id']} to={`/details/${item['id']}`} className='card w-100 glass'>
+                            <Link key={item['id']} to={`/post-details/${item['id']}`} className='card w-100 glass'>
                                 <figure><img src={item['img']}/></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{item['title']}</h2>

@@ -17,7 +17,7 @@ const ByCategoryPage = () => {
             setCategoryList(res);
         })()
 
-    }, [])
+    }, [categoryId])
 
          
      
